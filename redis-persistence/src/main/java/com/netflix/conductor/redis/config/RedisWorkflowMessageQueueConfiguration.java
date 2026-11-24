@@ -10,6 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
+// ArchBeagle local test (2026-11-24): a comment-only change; close without merging.
 package com.netflix.conductor.redis.config;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
