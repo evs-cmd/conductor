@@ -1,0 +1,20 @@
+# ArchBeagle repository rules (architecture/0111): a test file for walking 0111 locally, 2026-11-24.
+version: 1
+rules:
+  - id: NO-CONSOLE-LOG
+    text: The UI logs through its logger, never console.log
+    check: {kind: pattern, language: typescript, pattern: "console.log($$$ARGS)", paths: ["ui-next/src/**"], except: ["ui-next/src/**/*.test.*"]}
+    modes: {pull_request: warn, pull_request_agent: require_approval}
+  - id: NO-MIGRATION-EDIT
+    text: Never edit a merged database migration
+    check: {kind: paths, changed: ["**/db/migration/**"], status: [modified, deleted, renamed]}
+    modes: {pull_request: block}
+  - id: CORE-FILE-SIZE
+    text: Keep a file in core under 1,500 lines
+    check: {kind: size, max_lines: 1500, paths: ["core/**/*.java"]}
+  - id: DOCS-TRUE-NOW
+    text: Docs say what is true now and mark what is planned
+    check: {kind: review, paths: ["docs/**"]}
+  - id: COMMIT-WHEN-ASKED
+    text: Commit only when asked
+    check: {kind: none}
