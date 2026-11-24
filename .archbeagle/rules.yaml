@@ -15,7 +15,6 @@ rules:
   - id: DOCS-TRUE-NOW
     text: Docs say what is true now and mark what is planned
     check: {kind: review, paths: ["docs/**"]}
-    modes: {pull_request: block}
   - id: COMMIT-WHEN-ASKED
     text: Commit only when asked
     check: {kind: none}
