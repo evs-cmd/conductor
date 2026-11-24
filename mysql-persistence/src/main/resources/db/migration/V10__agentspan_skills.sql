@@ -17,3 +17,4 @@ CREATE TABLE IF NOT EXISTS skill_package (
     created_at BIGINT,
     PRIMARY KEY (handle)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- ArchBeagle local test (2026-11-24): a comment-only change; close without merging.

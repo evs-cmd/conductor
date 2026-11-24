@@ -1,3 +1,5 @@
+// ArchBeagle local test (2026-11-24): a comment-only change; close without merging.
+console.log("ArchBeagle local test");
 import { Editor } from "@monaco-editor/react";
 import {
   CheckCircleOutlined as CheckCircleOutlinedIcon,
